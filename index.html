@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المحكمة العربية الذكية للتحكيم</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.min.js"></script>
+</head>
+<body dir="rtl">
+
+    <header>
+	<div class="logo-container">
+            <img src="images/logo.png" alt="شعار المحكمة العربية الذكية للتحكيم" class="logo">
+        <h1>المحكمة العربية الذكية للتحكيم</h1>
+	
+        <nav>
+            <ul class="menu">
+                <li class="dropdown">
+                    <a href="#">الأقسام</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#submit-case">تقديم الدعوى</a></li>
+                        <li><a href="#assign-arbitrators">تعيين المحكمين</a></li>
+                        <li><a href="#schedule-sessions">جدول الجلسات</a></li>
+                        <li><a href="#issue-decision">إصدار الحكم</a></li>
+                        <li><a href="#follow-up">التنفيذ والمتابعة</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- تقديم الدعوى -->
+        <section id="submit-case">
+            <h2>تقديم الدعوى</h2>
+            <form id="case-form">
+                <label for="case-details">تفاصيل القضية:</label>
+                <textarea id="case-details" required></textarea>
+
+                <label for="claims">المطالبات:</label>
+                <input type="text" id="claims" required>
+
+                <button type="submit">إرسال الدعوى</button>
+            </form>
+            <div id="confirmation-message"></div>
+        </section>
+
+        <!-- تعيين المحكمين -->
+        <section id="assign-arbitrators">
+            <h2>تعيين المحكمين</h2>
+            <button id="assign-arbitrators-btn">تعيين المحكمين</button>
+            <div id="arbitrators-list">
+                <h3>مقالات حول تعيين المحكمين</h3>
+                <p>تعيين المحكمين هو عملية حيوية في المحكمة الذكية، حيث يتم اختيار المحكمين بناءً على تخصصاتهم وخبراتهم.</p>
+                <p>تتعامل المحكمة مع المحكمين المؤهلين لضمان تحقيق العدالة في القضايا.</p>
+            </div>
+        </section>
+
+        <!-- جدول الجلسات -->
+        <section id="schedule-sessions">
+            <h2>جدول الجلسات</h2>
+            <button id="create-schedule-btn">إنشاء الجدول</button>
+            <div id="schedule">
+                <h3>مقالات حول جدول الجلسات</h3>
+                <p>جدول الجلسات يساعد على تنظيم القضايا وضمان تسريع عملية التحكيم.</p>
+                <p>يمكن للمستخدمين متابعة الجلسات من خلال هذا الجدول لضمان شفافية العملية.</p>
+            </div>
+        </section>
+
+        <!-- إصدار الحكم -->
+        <section id="issue-decision">
+            <h2>إصدار الحكم</h2>
+            <button id="review-evidence-btn">مراجعة الأدلة</button>
+            <button id="issue-decision-btn">إصدار الحكم</button>
+            <div id="decision">
+                <h3>مقالات حول إصدار الحكم</h3>
+                <p>إصدار الحكم هو المرحلة النهائية في عملية التحكيم ويجب أن يتم بناءً على الأدلة المقدمة.</p>
+                <p>المحكمة تسعى دائمًا لضمان أن يكون الحكم عادلاً ومنصفًا.</p>
+            </div>
+        </section>
+
+        <!-- التنفيذ والمتابعة -->
+        <section id="follow-up">
+            <h2>التنفيذ والمتابعة</h2>
+            <button id="track-implementation-btn">متابعة التنفيذ</button>
+            <div id="feedback-form">
+                <h3>مقالات حول التنفيذ والمتابعة</h3>
+                <p>تنفيذ الأحكام يتطلب متابعة دقيقة للتأكد من تنفيذها بشكل صحيح.</p>
+                <p>المحكمة توفر الدعم اللازم لضمان تنفيذ الأحكام بشكل فعال.</p>
+            </div>
+        </section>
+
+        <!-- تواصل معنا -->
+        <section id="contact">
+            <h2>تواصل معنا</h2>
+            <form id="contact-form">
+                <label for="contact-name">الاسم:</label>
+                <input type="text" id="contact-name" required>
+
+                <label for="contact-email">البريد الإلكتروني:</label>
+                <input type="email" id="contact-email" required>
+
+                <label for="contact-message">الرسالة:</label>
+                <textarea id="contact-message" required></textarea>
+
+                <button type="submit">إرسال</button>
+            </form>
+            <div id="contact-message"></div>
+        </section>
+
+        <!-- نموذج ثلاثي الأبعاد -->
+        <section id="3d-model">
+            <h2>نموذج ثلاثي الأبعاد</h2>
+            <div id="3d-container"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="#" class="social-icon"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#" class="social-icon"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#" class="social-icon"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="#" class="social-icon"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+        <p>جميع الحقوق محفوظة &copy; 2024 المحكمة العربية الذكية للتحكيم</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
